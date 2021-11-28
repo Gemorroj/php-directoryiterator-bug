@@ -1,0 +1,55 @@
+Tested on docker-win.
+
+DirectoryIterator returns only 1 file from src/Repository
+
+Example output:
+```
+We have problems!
+DirectoryIterator returns 1 elements, scandir returns 40 elements
+DirectoryIterator output:
+WebsiteRepository.php
+
+Scandir output:
+.
+..
+AdminRepository.php
+InStorePickupStoreConditionRepository.php
+InStorePickupStoreRepository.php
+LogApiRequestRepository.php
+LogCarrierRequestRepository.php
+LogDistanceRequestRepository.php
+LogPlatformRequestRepository.php
+LogSmartPackagingRepository.php
+MergedShippingOptionRepository.php
+OriginRepository.php
+PackagingRuleRepository.php
+RateShoppingCarrierPackageRepository.php
+RateShoppingCarrierRepository.php
+RateShoppingCarrierServiceRepository.php
+RateShoppingRepository.php
+ResetPasswordTokenRepository.php
+ShippingAreaConditionRepository.php
+ShippingAreaRepository.php
+ShippingOnProductPageRepository.php
+ShippingOptionRepository.php
+ShippingRuleConditionRepository.php
+ShippingRuleRepository.php
+ShippingSegmentConditionRepository.php
+ShippingSegmentRepository.php
+SmartPackagingMappingRepository.php
+StatisticsLabelRepository.php
+StatisticsRateRepository.php
+StatisticsTrackingRepository.php
+TableRateMethodConditionRepository.php
+TableRateMethodRepository.php
+TableRateRepository.php
+TimeSlotRepository.php
+UniqueTrait.php
+UserBillingFeatureRepository.php
+UserBillingPlanRepository.php
+UserFeaturesRepository.php
+UserRepository.php
+WebsiteRepository.php
+```
+
+All fine on native windows/linux machine (Windows 10 / Centos 8 Stream).
