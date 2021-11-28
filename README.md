@@ -1,8 +1,19 @@
-Tested on docker-win.
+### PHP DirectoryIterator bug on Alpine Linux
 
-DirectoryIterator returns only 1 file from src/Repository
+Tested on docker-win & online alpine linux.
+All fine on native windows/linux machine (Windows 10 / Centos 8 Stream).
 
-Example output:
+https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192
+```
+git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
+cd php-directoryiterator-bug
+php test.php
+```
+
+#### Problem:
+DirectoryIterator returns only 1 file from `src/Repository`
+
+Example output (`php test.php`):
 ```
 We have problems!
 DirectoryIterator returns 1 elements, scandir returns 40 elements
@@ -51,5 +62,3 @@ UserFeaturesRepository.php
 UserRepository.php
 WebsiteRepository.php
 ```
-
-All fine on native windows/linux machine (Windows 10 / Centos 8 Stream).
