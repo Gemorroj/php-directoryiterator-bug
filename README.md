@@ -12,6 +12,8 @@ php test.php
 
 Or run docker:
 ```
+git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
+cd php-directoryiterator-bug
 docker-compose up --build --remove-orphans --force-recreate
 docker-compose exec php sh
 php test.php
