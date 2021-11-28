@@ -3,10 +3,17 @@
 Tested on docker-win & online alpine linux.
 All fine on native windows/linux machine (Windows 10 / Centos 8 Stream).
 
-https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192
+Native Alpine Linux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)
 ```
 git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
 cd php-directoryiterator-bug
+php test.php
+```
+
+Or run docker:
+```
+docker-compose up --build --remove-orphans --force-recreate
+docker-compose exec php sh
 php test.php
 ```
 
