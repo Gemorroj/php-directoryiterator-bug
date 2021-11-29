@@ -1,20 +1,14 @@
-### PHP DirectoryIterator bug on Alpine Linux
+### PHP DirectoryIterator bug on Docker-win + Alpine Linux
 
-Tested on docker-win & online alpine linux.
+Tested on Docker-win & online alpine linux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg).
 All fine on native windows/linux machine (Windows 10 / Centos 8 Stream).
+And all fine on native Alpine linux 3.15.
 
-Native Alpine Linux (https://bellard.org/jslinux/vm.html?url=alpine-x86.cfg&mem=192)
+#### Reproduce (windows + docker-win):
 ```
 git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
 cd php-directoryiterator-bug
-php test.php
-```
-
-Or run docker:
-```
-git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
-cd php-directoryiterator-bug
-docker-compose up --build --remove-orphans --force-recreate
+docker-compose up --build --remove-orphans --force-recreate -d
 docker-compose exec php sh
 php test.php
 ```
