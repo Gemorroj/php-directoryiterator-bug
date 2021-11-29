@@ -12,6 +12,17 @@ docker-compose up --build --remove-orphans --force-recreate -d
 docker-compose exec php sh
 php test.php
 ```
+Another example using `mc` (show only 1 file):
+```
+git clone https://github.com/Gemorroj/php-directoryiterator-bug.git
+cd php-directoryiterator-bug
+docker-compose up --build --remove-orphans --force-recreate -d
+docker-compose exec php sh
+apk add mc
+cd src/Repository
+mc
+```
+
 
 #### Problem:
 DirectoryIterator returns only 1 file from `src/Repository`
